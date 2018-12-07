@@ -1,0 +1,60 @@
+body {
+    background-image: url("../images/bg.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+
+.box{    
+    margin: 0 auto; 
+    background: #eee344;
+    padding: 20px;
+    height:100%;     
+}
+
+.header{
+    color: rgb(59, 29, 192);
+    padding: 20px;
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: bold;    
+    display: block;
+    width: 100%;
+    margin-left: 20px;
+    margin-top: 20px;
+    text-align: center;
+}  
+
+.question{
+    font-size:28px;
+    color:black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.answer{
+    font-size:20px;
+    color:black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.text{
+    font-size:28px;
+    color:black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+    margin-bottom: 14px;
+}
+
+.btn{
+    display: inline-block;
+    color:black;
+    width:200px;
+    padding: 10px;
+    margin-left: 40%;
+    background: pink;
+    font-size: 25px;
+}

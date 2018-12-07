@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Totally Trivia Game</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+
+  <div class="container box">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        
+        <h1 class="header">Trivia Game</h1>
+        <hr>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-12">
+        
+        <div><h3 id="timer" class="question"></h3>
+      </div>
+      </div>
+
+      <!--<div class="offset-md-1"></div>-->
+
+      <div class="col-md-12">
+        <div id="start-page" class="start-page-text">
+          
+          <div class="btn btn-primary" id="start-button">Start</div>
+        </div>
+
+      <div>
+        <div id="questions-box" class="question"></div>
+      </div>
+
+        <div class="hidden" id="end-page">
+          <h2></h2>
+          <p id="correct-answers"></p>
+          <p id="incorrect-answers"></p>
+          <p id="unanswered"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+ 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+</body>
+</html>
