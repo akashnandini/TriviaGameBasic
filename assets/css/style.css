@@ -58,3 +58,13 @@ body {
     background: pink;
     font-size: 25px;
 }
+
+.btn_done{
+    display: inline-block;
+    color:black;
+    width:200px;
+    padding: 10px;
+    
+    background: pink;
+    font-size: 25px;
+}

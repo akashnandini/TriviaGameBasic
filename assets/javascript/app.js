@@ -29,6 +29,7 @@ var gameState = {
     }
   },
 
+  
   // stop the timer and check the answers
   stopTimer: function() {
     clearInterval();
@@ -63,14 +64,16 @@ var trivia = {
       var answer1 = questionBank[i].answers[0];
       var answer2 = questionBank[i].answers[1];
       var answer3 = questionBank[i].answers[2];
+      var answer4 = questionBank[i].answers[3];
 
       divContainer.append('<div><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label id="radio'+i+'label" for="radio'+i+'">' + answer1 + '</label></div>');
       divContainer.append('<div><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label id="radio'+i+'label" for="radio'+i+'">' + answer2 + '</label></div>');
       divContainer.append('<div><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label id="radio'+i+'label" for="radio'+i+'">' + answer3 + '</label></div>');
+      divContainer.append('<div><input class="form-check-input" type="radio" name="radio-group'+i+'" id="radio'+i+'"><label id="radio'+i+'label" for="radio'+i+'">' + answer4 + '</label></div>');
     }
 
     // add a Done button to the end of the page and register its click handler
-    var doneButton = '<button class="btn btn-primary" id="done-button" type="submit">Done</button>';
+    var doneButton = '<button class="btn_done btn-primary" id="done-button" type="submit">Done</button>';
     divContainer.append(doneButton);
     $("#done-button").on("click", gameState.stopTimer);
   },
@@ -88,20 +91,21 @@ var trivia = {
     for (var i = 0; i < questionBank.length; i++) {
       correctAnswer = questionBank[i].correct;
       userAnswer = $('input[id=radio'+i+']:checked + label').text();
+      console.log("userAnswer== "+userAnswer);
+      console.log("correctAnswer== "+userAnswer);
 
       if (userAnswer === correctAnswer) {
         numCorrect++;
       } else if (userAnswer === "") {
         numUnanswered++;
-      } else if (userAnswer !== correctAnswer) {
-        {
-          numIncorrect++;
-        }
+      } else if (userAnswer !== correctAnswer) {        
+          numIncorrect++;        
       }
     }
 
     // show the end page with the score tally
     gameState.showEndPage(numCorrect, numIncorrect, numUnanswered);
+    
   },
 }
 
